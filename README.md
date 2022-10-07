@@ -17,23 +17,24 @@ Se cuenta con 24 tablas (una por cada categoría de producto) con información d
 ## **Diccionario de datos:**
 
 ### **Reseñas**
-reviewerID - ID del usuario, ejemplo: A2SUAM1J3GNN3B.
 
-asin - ID del producto, ejemplo: 0000013714.
+**reviewerID** - ID del usuario, ejemplo: A2SUAM1J3GNN3B.
 
-reviewerName - nombre del usuario.
+**asin** - ID del producto, ejemplo: 0000013714.
 
-helpful - Puntaje de utilidad de la reseña (votos externos), e.g. 2/3.
+**reviewerName** - nombre del usuario.
 
-reviewText - Texto de la reseña.
+**helpful** - Puntaje de utilidad de la reseña (votos externos), e.g. 2/3.
 
-overall - Puntaje dado al producto.
+**reviewText** - Texto de la reseña.
 
-summary - Resumen de la reseña.
+**overall** - Puntaje dado al producto.
 
-unixReviewTime - Fecha de la reseña (unix time).
+**summary** - Resumen de la reseña.
 
-reviewTime - Fecha de la reseña .
+**unixReviewTime** - Fecha de la reseña (unix time).
+
+**reviewTime** - Fecha de la reseña .
 
 
 ### **Metadata de productos**
