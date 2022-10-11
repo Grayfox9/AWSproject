@@ -1,0 +1,18 @@
+{
+	"name": "DestinationDataset_ejt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "proyectoAWS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "datos"
+			}
+		},
+		"schema": {}
+	}
+}
