@@ -1,0 +1,20 @@
+{
+	"name": "DestinationDataset_bqi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "proyectoAWS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "pruebadatafactory",
+				"container": "datos"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": {}
+	}
+}
