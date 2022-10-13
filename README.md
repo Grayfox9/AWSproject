@@ -1,3 +1,4 @@
+
 # Amazon Reviews Data Pipeline, Analytics and Machine Learning 
 
 ## Acerca del proyecto
@@ -70,3 +71,4 @@ Skaivu Insights consta de profesionales en diferentes áreas que estarán encarg
 * [Jorge Fonseca](https://www.linkedin.com/in/jorge-fonseca-alba-83433b117/) - Data Scientist 
 * [Daniela Hugueth](https://www.linkedin.com/in/dhugueth/) - Data Analytic
 * [Ingmar Orta](https://www.linkedin.com/in/ingmarorta/) - Data Scientist
+
