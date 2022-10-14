@@ -1,11 +1,17 @@
 
 # Amazon Reviews Data Pipeline, Analytics and Machine Learning 
 
+<div align="center">
+    <img src="img\skaivuinsightslogo.png" alt="Project Screenshot" width="80%">
+</div>
+<br>
+
 #### **Contenido:**
 * Acerca del proyecto
 * Objetivo General
 * Acerca de los datos
-* Solución presentada
+* Solución: Data Pipeline
+* Metodología de trabajo
 * Equipo de trabajo
 
 ## **Acerca del proyecto**
@@ -17,6 +23,11 @@ La compañía de comercio electrónico Amazon, contrató a la empresa de Ciencia
 Realizar un análisis de reseñas y ventas de productos a partir de la información proporcionada por el cliente Amazon, así, extraer información objetiva y concisa de indicadores claves de desempeño e idear un sistema de recomendaciones de productos. 
 
 ## **Acerca de los datos**
+
+<div align="center">
+    <img src="img\amazonreviews.png" alt="Project Screenshot" width="50%">
+</div>
+<br>
 
 Se cuenta con 24 tablas (una por cada categoría de producto) con información de artículos comprados en Amazon. El rango de fecha data desde 1996 hasta 2014. Se poseen alrededor de 20gb con un total de 142.8 millones de reviews y 3.1gb de metadata.
 
@@ -69,8 +80,7 @@ Afortunadamente, las columnas de cada tabla presentan la misma información, la 
 
 Las tablas de metadata representan el nombre del producto, precio, URL de la imagen, productos relacionados, rank en ventas, nombre de la marca y a qué categoría pertenece. 
 
-## **Solución presentada**
-            Diagrama flujo del dato
+## **Data Pipeline**
 <div align="center">
     <img src="img\pipeline_diagram.png" alt="Project Screenshot" width="100%">
 </div>
@@ -124,7 +134,26 @@ Para aliviar la carga de los datos se establece una carga en delta por años:
 
 Para más información acerca del proceso de ETL por favor revisar los Notebooks dentro de la carpeta de Scripts.
 
-## Equipo de Trabajo
+## **Metodología de trabajo**
+
+<div align="center">
+    <img src="img\agilemetodology.png" alt="Project Screenshot" width="100%">
+</div>
+<br>
+
+Se utilizará un método de trabajo ágil con enfoque en la metodología de gestión de proyectos Kanban utilizando el software de administración de proyectos [Trello](https://trello.com/en), en donde los integrantes del proyecto dividiremos y asignaremos las actividades a realizar y mantendremos un seguimiento a todo el proyecto.
+
+La unión de estas metodologías nos dará:
+
+* Gestión de trabajo colaborativo
+
+* Resoluciones rápidas y efectivas
+
+* Visualización del flujo de trabajo
+
+* Simplicidad
+
+### **Equipo de Trabajo**
 
 Skaivu Insights consta de profesionales en diferentes áreas que estarán encargados de realizar en conjunto las tareas designadas durante el proyecto. El equipo de trabajo estará conformado por: 
 
@@ -134,3 +163,10 @@ Skaivu Insights consta de profesionales en diferentes áreas que estarán encarg
 * [Daniela Hugueth](https://www.linkedin.com/in/dhugueth/) - Data Analytic
 * [Ingmar Orta](https://www.linkedin.com/in/ingmarorta/) - Data Scientist
 
+
+### **Cronograma**
+
+<div align="center">
+    <img src="img\cronograma.png" alt="Project Screenshot" width="100%">
+</div>
+<br>
