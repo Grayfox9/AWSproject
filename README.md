@@ -11,9 +11,9 @@
 1. Descripción general del proyecto
 2. Equipo de trabajo
 3. Metodología de trabajo
-4. Cronograma a la fecha
-5. Objetivo General
-6. Descripción y diccionario de los datos originales
+4. Objetivo General
+5. Descripción y diccionario de los datos originales
+6. EDA
 7. Solución: Data Pipeline
 8. Diccionario de los datos - Data Analytics 
 
@@ -21,7 +21,7 @@
 
 La compañía Amazon contrataron los servicios de ingeniería y análisis de datos de la empresa Skaivu Insights con el objetivo de apoyar el desarrollo de nuevas perspectivas para mejorar ventas y experiencia al usuario.
 
-La empresa se encargará de almacenar, transformar, estructurar, analizar y modelar la información proporcionada para crear un reporte de inteligencia empresarial, y adicionalmente un sistema automático de recomendación de productos relevantes, basado en la información de opiniones provenientes de otros usuarios.
+La empresa se encargó de almacenar, transformar, estructurar, analizar y modelar la información proporcionada para crear un reporte de inteligencia empresarial, y adicionalmente un sistema automático de recomendación de productos relevantes, basado en la información de opiniones provenientes de otros usuarios.
 
 ## Equipo de Trabajo
 
@@ -40,21 +40,14 @@ Skaivu Insights consta con un grupo de profesionales en diferentes áreas que es
 </div>
 <br>
 
-Se utilizará un método de trabajo ágil con enfoque en la metodología de gestión de proyectos Kanban utilizando el software de administración de proyectos [Trello](https://trello.com/en), en donde los integrantes del proyecto dividiremos y asignaremos las actividades a realizar y mantendremos un seguimiento a todo el proyecto.
+Se utilizó un método de trabajo ágil con enfoque en la metodología de gestión de proyectos Kanban utilizando el software de administración de proyectos [Trello](https://trello.com/en), en donde los integrantes del proyecto dividimos y asignamos las actividades a realizar y manteníamos un seguimiento a todo el proyecto.
 
-La unión de estas metodologías nos dará:
+La unión de estas metodologías ofreció:
 
 * Gestión de trabajo colaborativo
 * Resoluciones rápidas y efectivas
 * Visualización del flujo de trabajo
 * Simplicidad
-
-## **Cronograma a la fecha**
-
-<div align="center">
-    <img src="img\cronograma.png" alt="Project Screenshot" width="100%">
-</div>
-<br>
 
 ## **Objetivo General**
 
@@ -130,6 +123,86 @@ Se recibieron 24 tablas con datos de reviewes hecho por clientes sobre artículo
             categories      --->    Lista de la categoría a la que pertenece el producto.
 
 ***La gran cantidad de volumen y variedad de dato son indicativos para emplear herramientas de Big Data***
+
+## **EDA**
+
+Se realizo un análisis exploratorio no gráfico de los datos originales para describir los datos, encontrar los patrones que existen en ellos e Identificar valores atípicos. El análisis se realizó en el entorno de trabajo colaborativo Apache Spark de [Azure Databricks](https://azure.microsoft.com/en-us/products/databricks/) por la facilidad que nos daba para manejas grandes cantidades de datos. 
+
+Las observaciones y características resultantes del análisis son las siguientes:
+ 
+ ### **Reseñas**
+
+***reviewerID :***
+* Tipo de dato "string" alfanumérico.
+* No presenta valores faltantes.
+* Hay repetición de códigos, lo cual no representa un error ya que un mismo usuario puede hacer más de una recomendación a productos distintos.
+
+***asin :***
+* Tipo de dato "string" alfanumérico.
+* No presenta valores faltantes.
+* Hay repetición de códigos, lo cual no representa un error ya que un producto puede tener varias reseñas
+
+***reviewerName :***
+* Tipo de dato "string".
+* Tiene algunos valores faltantes (null)
+
+***helpful :***
+* Tipo de dato "string" alfanumérico.
+* No presenta valores faltantes
+* El primer valor del intervalo representa calificaciones positivas de la reseña y el ultimo representa el total de calificaciones a la reseña
+
+***reviewText :***
+* Tipo de dato "string" alfanumérico de gran longitud.
+
+***overall :***
+* Tipo de dato "float".
+* No presenta valores faltantes.
+* Sus valores varían desde 1.0 a 5.0
+
+***summary :***
+* Tipo de dato "string".
+
+***unixReviewTime :***
+* Tipo de dato "int".
+* No presenta valores faltantes.
+* Hay repetición de fechas, lo cual no representa un error ya que un mismo día se pudieron registrar varias reseñas
+
+***reviewTime :***
+* Tipo de dato "string" alfanumérico.
+* No presenta valores faltantes.
+* Hay repetición de fechas, lo cual no representa un error ya que que un mismo día se pudieron registrar varias reseñas
+
+### **Metadata**
+
+***asin :***
+* Tipo de dato "string" alfanumérico.
+* No presenta valores faltantes.
+* No hay repetición de códigos.
+
+***title :***
+* Tipo de dato "string" alfanumérico.
+
+***price :***
+* Tipo de dato "float".
+* Tiene algunos valores faltantes (null)
+
+***imUrl :***
+* Tipo de dato "string".
+
+***related :***
+* Tipo de dato "string".
+
+***salesRank :***
+* Tipo de dato "string".
+* Tiene muchos valores faltantes (null).
+
+***brand :***
+* Tipo de dato "string" alfanumérico.
+* Tiene muchos valores faltantes (null)
+* Presenta muchos datos sucios, incoherentes y faltan referencias
+
+***categories :***
+* Tipo de dato "string".
  
 ## **Solución: Data Pipeline**
 ***Diagrama flujo del dato***
